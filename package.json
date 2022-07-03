@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index",
   "scripts": {
-    "build": "npx tsc && cd client && npm ci && npm run build",
+    "build": "npm ci && npx tsc && cd client && npm ci && npm run build",
     "start": "node build",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\"",
     "preview": "npx tsc && cd client && npm run build && cd .. && node build"
