@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply h-full w-full font-sans;
+}
+
+body > div {
+  @apply h-full w-full;
+}
+
+._toastItem {
+  @apply w-64 rounded-lg bg-base-200 px-2 text-current sm:w-72 !important;
+}
+
+._toastBar {
+  @apply bg-base-300 !important;
+}
+
+._toastBtn {
+  @apply select-none text-4xl sm:text-2xl !important;
+}
+
+._toastBar::-webkit-progress-value {
+  @apply bg-error !important;
+}
+
+._toastBar::-moz-progress-bar {
+  @apply bg-error !important;
+}
