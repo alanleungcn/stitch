@@ -5,7 +5,7 @@ Simple implementation on WebRTC.
 
 #### Architecture
 
-![Architecture](assets/architecture.svg)
+![Architecture](assets/architecture.png)
 
 #### Running
 
