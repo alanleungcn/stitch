@@ -5,10 +5,12 @@
   "type": "module",
   "main": "index",
   "scripts": {
-    "build": "npm install typescript && npm ci && npx tsc && cd client && npm ci && npm run build",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\"",
     "start": "node build",
-    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q build/index.js\"",
-    "preview": "npx tsc && cd client && npm run build && cd .. && node build"
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "cd client && npm ci && npm run build",
+    "build:server": "npm ci && tsc --build"
   },
   "author": "",
   "license": "MIT",

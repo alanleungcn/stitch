@@ -1,23 +1,22 @@
-## STITCH
+# STITCH
 
 Bare prototype for real-time screen/camera sharing.
 Simple implementation on WebRTC.
 
-#### Architecture
+## Architecture
 
-![Architecture](assets/system.png)
+![Architecture](assets/stitch_system.png)
 
-#### Running
+## Running
 
-1. Run `npm install` on server and client directories
-2. Run `npm run dev` on both directories
+### Development
+- `npm run dev:client` to start client on port 3000
+- `npm run dev:start` to start server on port 8000
 
-Default port
-- server: 8000
-- client: 3000
+### Building
+- `npm run build` to build both client and server
+- `npm run start` to start both client and server on port 8000
 
-#### Caveats
-
-Due to the complixity of WebRTC, this project is abandoned.
+## Caveats
 
 - Only runnable on the same local network (TURN server limitation)
